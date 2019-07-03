@@ -15,9 +15,9 @@ ENV STATIC_PATH /app/static
 ENV STATIC_INDEX 0
 
 # Add demo app
-# COPY ./app /app
+COPY ./app /app
 WORKDIR /app
-COPY ./app/requirements.txt /app/
+#COPY ./app/requirements.txt /app/requirements.txt
 RUN pip install -r /app/requirements.txt
 
 # Make /app/* available to be imported by Python globally to better support several use cases like Alembic migrations.
